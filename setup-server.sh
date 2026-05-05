@@ -10,8 +10,8 @@ echo "============================================"
 # === 1. System Update & Upgrade ===
 echo ""
 echo "[1/4] Updating system..."
-apt update
-apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
+apt-get update
+apt-get upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
 
 # === 2. Install Packages ===
 echo ""
@@ -20,13 +20,13 @@ echo "[2/4] Installing packages..."
 # openssh-server: only if not installed
 if ! dpkg -l openssh-server 2>/dev/null | grep -q '^ii'; then
     echo "  --> openssh-server not found, installing..."
-    apt install -y openssh-server
+    apt-get install -y openssh-server
 else
     echo "  --> openssh-server already installed, skipping."
 fi
 
 # fail2ban: always install
-apt install -y fail2ban
+apt-get install -y fail2ban
 
 # === 3. SSH Hardening ===
 echo ""
