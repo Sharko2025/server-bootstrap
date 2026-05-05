@@ -38,8 +38,8 @@ chmod 700 /root/.ssh
 touch /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/authorized_keys
 
-grep -qxF 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINKSgji7k8CpbQHtUnXW8M47+u/6P84FAC9PwCRKKVcP loi.nguyen@pebsteel.com.vn' /root/.ssh/authorized_keys || \
-echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINKSgji7k8CpbQHtUnXW8M47+u/6P84FAC9PwCRKKVcP loi.nguyen@pebsteel.com.vn' >> /root/.ssh/authorized_keys
+grep -qxF 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJZ4aWoS2hWar+5zW13Ish3Up+LpPBjpKP8knqfgibaV mcp-client' /root/.ssh/authorized_keys || \
+echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJZ4aWoS2hWar+5zW13Ish3Up+LpPBjpKP8knqfgibaV mcp-client' >> /root/.ssh/authorized_keys
 
 chown -R root:root /root/.ssh
 
